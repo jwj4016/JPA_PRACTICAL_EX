@@ -12,8 +12,9 @@ public class Item {
     @Id
     @Column(name = "ITEM_ID")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-    private String name;
-    private long price;
-    private int stockQuantity;
+    private Long id;
+
+    private String name;            //이름
+    private long price;             //가격
+    private int stockQuantity;      //재고수량
 }
