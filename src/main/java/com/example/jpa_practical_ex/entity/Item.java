@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(schema = "jpa", name = "ITEM")
 @Setter
@@ -17,4 +20,7 @@ public class Item {
     private String name;            //이름
     private long price;             //가격
     private int stockQuantity;      //재고수량
+
+    @ManyToMany(mappedBy = "items")
+    private List<Category> categories = new ArrayList<>();
 }

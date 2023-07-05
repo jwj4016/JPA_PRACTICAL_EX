@@ -37,6 +37,12 @@ public class Order {
     @Enumerated(EnumType.STRING)
     private OrderStatus status;         //주문 상태
 
+    @OneToOne
+    @JoinColumn(name = "DELIVERY_ID")
+    private Delivery delivery;
+
+
+
     public void setMember(Member member) {
         //기존관계 제거
         if (this.member != null) {
@@ -50,5 +56,12 @@ public class Order {
         orderItems.add(orderItem);
         orderItem.setOrder(this);
     }
+
+    public void setDelivery(Delivery delivery) {
+        this.delivery = delivery;
+        delivery.setOrder(this);
+
+    }
+
 
 }
