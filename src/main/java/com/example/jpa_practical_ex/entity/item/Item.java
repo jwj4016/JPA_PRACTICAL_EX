@@ -1,5 +1,7 @@
-package com.example.jpa_practical_ex.entity;
+package com.example.jpa_practical_ex.entity.item;
 
+import com.example.jpa_practical_ex.entity.BaseEntity;
+import com.example.jpa_practical_ex.entity.Category;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,10 +10,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(schema = "jpa", name = "ITEM")
+//@Table(schema = "jpa", name = "ITEM")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "DTYPE")
 @Setter
 @Getter
-public class Item {
+public abstract class Item extends BaseEntity {
     @Id
     @Column(name = "ITEM_ID")
     @GeneratedValue(strategy = GenerationType.AUTO)

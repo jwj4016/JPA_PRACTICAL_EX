@@ -13,7 +13,7 @@ import java.util.List;
 @Table(schema = "jpa", name = "ORDERS")
 @Getter
 @Setter
-public class Order {
+public class Order extends BaseEntity{
     @Id
     @Column(name = "ORDER_ID")
     @GeneratedValue(strategy = GenerationType.AUTO)

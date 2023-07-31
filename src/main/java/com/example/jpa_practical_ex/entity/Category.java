@@ -1,5 +1,6 @@
 package com.example.jpa_practical_ex.entity;
 
+import com.example.jpa_practical_ex.entity.item.Item;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,7 +12,7 @@ import java.util.List;
 @Setter
 @Table(name = "CATEGORY", schema = "jpa")
 @Entity
-public class Category {
+public class Category extends BaseEntity{
     @Id
     @Column(name = "CATEGORY_ID")
     @GeneratedValue

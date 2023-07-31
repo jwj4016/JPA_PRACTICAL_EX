@@ -1,5 +1,6 @@
 package com.example.jpa_practical_ex.entity;
 
+import com.example.jpa_practical_ex.entity.item.Item;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,7 +9,7 @@ import lombok.Setter;
 @Table(name = "ORDER_ITEM", schema = "jpa")
 @Getter
 @Setter
-public class OrderItem {
+public class OrderItem extends BaseEntity{
     @Id
     @Column(name = "ORDER_ITEM_ID")
     @GeneratedValue(strategy = GenerationType.AUTO)

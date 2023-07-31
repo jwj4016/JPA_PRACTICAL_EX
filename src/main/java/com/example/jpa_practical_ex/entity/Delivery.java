@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @Table(name = "DELIVERY", schema = "jpa")
 @Entity
-public class Delivery {
+public class Delivery extends BaseEntity{
     @Id
     @GeneratedValue
     @Column(name = "DELIVERY_ID")

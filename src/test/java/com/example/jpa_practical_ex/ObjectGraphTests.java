@@ -1,6 +1,6 @@
 package com.example.jpa_practical_ex;
 
-import com.example.jpa_practical_ex.entity.Item;
+import com.example.jpa_practical_ex.entity.item.Item;
 import com.example.jpa_practical_ex.entity.Member;
 import com.example.jpa_practical_ex.entity.Order;
 import com.example.jpa_practical_ex.entity.OrderItem;
@@ -84,24 +84,24 @@ public class ObjectGraphTests {
         EntityTransaction tx = entityManager.getTransaction();
         tx.begin();
 
-        Item apple = new Item();
-        apple.setName("apple");
-        apple.setPrice(1000);
-        apple.setStockQuantity(500);
-
-        Item chocolate = new Item();
-        chocolate.setName("chocolate");
-        chocolate.setPrice(2000);
-        chocolate.setStockQuantity(100);
-
-        Item ipad = new Item();
-        ipad.setName("ipad");
-        ipad.setPrice(1000000);
-        ipad.setStockQuantity(50);
-
-        entityManager.persist(apple);
-        entityManager.persist(ipad);
-        entityManager.persist(chocolate);
+//        Item apple = new Item();
+//        apple.setName("apple");
+//        apple.setPrice(1000);
+//        apple.setStockQuantity(500);
+//
+//        Item chocolate = new Item();
+//        chocolate.setName("chocolate");
+//        chocolate.setPrice(2000);
+//        chocolate.setStockQuantity(100);
+//
+//        Item ipad = new Item();
+//        ipad.setName("ipad");
+//        ipad.setPrice(1000000);
+//        ipad.setStockQuantity(50);
+//
+//        entityManager.persist(apple);
+//        entityManager.persist(ipad);
+//        entityManager.persist(chocolate);
 
 
         tx.commit();

@@ -11,7 +11,7 @@ import java.util.List;
 @Table(name = "MEMBER", schema = "jpa")
 @Getter
 @Setter
-public class Member {
+public class Member extends BaseEntity{
     @Id
     @Column(name = "MEMBER_ID")
     @GeneratedValue(strategy = GenerationType.AUTO)
