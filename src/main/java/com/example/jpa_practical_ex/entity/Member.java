@@ -18,10 +18,16 @@ public class Member extends BaseEntity{
     //id가 null 일 경우 처리를 위해 long -> Long으로 변경.
     //private long id;
     private Long id;
+
     private String name;
-    private String city;
-    private String street;
-    private String zipcode;
+
+    //값타입으로 대체
+    //private String city;
+    //private String street;
+    //private String zipcode;
+
+    @Embedded
+    private Address address;
 
     @OneToMany(mappedBy = "member")
     private List<Order> orders = new ArrayList<>();

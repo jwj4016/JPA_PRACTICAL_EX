@@ -18,11 +18,13 @@ public class Delivery extends BaseEntity{
     @OneToOne(mappedBy = "delivery")
     private Order order;
 
-    private String city;
+    //값타입으로 대체
+    //private String city;
+    //private String street;
+    //private String zipcode;
 
-    private String street;
-
-    private String zipcode;
+    @Embedded
+    private Address address;
 
     @Enumerated(EnumType.STRING)
     private DeliveryStatus Status;
